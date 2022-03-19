@@ -456,6 +456,11 @@ Supported commands:\n\
 
     /* settings */
     IDS_SETTINGS_CAPTION "OpenVPN - Настройки"
+    IDS_SETTINGS_ERROR_CAPTION "Неверные настройки"
+    IDS_SETTINGS_NOT_ABSOLUTE_CONFIG_PATH "Путь к файлам конфигурации должен быть абсолютным"
+    IDS_SETTINGS_NOT_ABSOLUTE_LOG_PATH "Путь к файлам журналов должен быть абсолютным"
+    IDS_SETTINGS_NOT_VALID_PORT "Укажите порт из интервала от 1 до 61000"
+    IDS_SETTINGS_NOT_VALID_MUTE_INTERVAL "Укажите для интервала приглушения положительное целое число"
 
     /* proxy */
     IDS_ERR_HTTP_PROXY_ADDRESS "Вы должны указать адрес HTTP-прокси."

@@ -455,6 +455,11 @@ Por favor, escolha outra."
 
     /* settings */
     IDS_SETTINGS_CAPTION "OpenVPN - Configurações"
+    IDS_SETTINGS_ERROR_CAPTION "Option error"
+    IDS_SETTINGS_NOT_ABSOLUTE_CONFIG_PATH "Specified config directory is not an absolute path"
+    IDS_SETTINGS_NOT_ABSOLUTE_LOG_PATH "Specified log directory is not an absolute path"
+    IDS_SETTINGS_NOT_VALID_PORT "Specified port is not valid (must be in the range 1 to 61000)"
+    IDS_SETTINGS_NOT_VALID_MUTE_INTERVAL "Specified mute interval is not valid (must be a positive integer)"
 
     /* proxy */
     IDS_ERR_HTTP_PROXY_ADDRESS "Você precisa especificar o endereço de proxy HTTP."

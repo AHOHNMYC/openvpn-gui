@@ -578,8 +578,8 @@ CheckAdvancedDlgParams (HWND hdlg)
     ExpandString (tmp_path, _countof(tmp_path));
     if (PathIsRelativeW (tmp_path))
     {
-        MessageBox (NULL, L"Specified config directory is not an absolute path",
-                    L"Option error", MB_OK);
+        MessageBox (hdlg, LoadLocalizedString(IDS_SETTINGS_NOT_ABSOLUTE_CONFIG_PATH),
+                    LoadLocalizedString(IDS_SETTINGS_ERROR_CAPTION), MB_OK);
         return false;
     }
 
@@ -587,8 +587,8 @@ CheckAdvancedDlgParams (HWND hdlg)
     ExpandString (tmp_path, _countof(tmp_path));
     if (PathIsRelativeW (tmp_path))
     {
-        MessageBox (NULL, L"Specified log directory is not an absolute path",
-                    L"Option error", MB_OK);
+        MessageBox (hdlg, LoadLocalizedString(IDS_SETTINGS_NOT_ABSOLUTE_LOG_PATH),
+                    LoadLocalizedString(IDS_SETTINGS_ERROR_CAPTION), MB_OK);
         return false;
     }
 
@@ -597,16 +597,16 @@ CheckAdvancedDlgParams (HWND hdlg)
     /* Restrict the port offset to sensible range -- port used is this + upto ~4000 as connection index */
     if (!status || (tmp < 1 || tmp > 61000))
     {
-        MessageBox (NULL, L"Specified port is not valid (must be in the range 1 to 61000)",
-                    L"Option error", MB_OK);
+        MessageBox (hdlg, LoadLocalizedString(IDS_SETTINGS_NOT_VALID_PORT),
+                    LoadLocalizedString(IDS_SETTINGS_ERROR_CAPTION), MB_OK);
         return false;
     }
 
     tmp = GetDlgItemInt (hdlg, ID_EDT_POPUP_MUTE, &status, FALSE);
     if (!status || tmp < 0)
     {
-        MessageBox (NULL, L"Specified mute interval is not valid (must be a positive integer)",
-                    L"Option error", MB_OK);
+        MessageBox (hdlg, LoadLocalizedString(IDS_SETTINGS_NOT_VALID_MUTE_INTERVAL),
+                    LoadLocalizedString(IDS_SETTINGS_ERROR_CAPTION), MB_OK);
         return false;
     }
 
